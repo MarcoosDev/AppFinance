@@ -48,6 +48,29 @@ class _HomePageState extends State<HomePage> {
                           fontFamily: "Arial",
                         ),
                       ),
+                      Spacer(),
+
+                      Container(
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 215, 229, 255),
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                        child: IconButton(
+                          onPressed: () => {},
+                          icon: Icon(Icons.notifications),
+                        ),
+                      ),
+                      const SizedBox(width: 10),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 215, 229, 255),
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                        child: IconButton(
+                          onPressed: () => {},
+                          icon: Icon(Icons.settings),
+                        ),
+                      ),
                     ],
                   ),
 
@@ -56,11 +79,6 @@ class _HomePageState extends State<HomePage> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        "Saldo disponível",
-                        style: TextStyle(fontSize: 16, color: Colors.black54),
-                      ),
-
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.baseline,
@@ -80,11 +98,16 @@ class _HomePageState extends State<HomePage> {
                             ",20",
                             style: TextStyle(
                               fontSize: 30,
+                              fontFamily: "Gothic",
                               fontWeight: FontWeight.w500,
                               color: const Color.fromARGB(255, 64, 64, 64),
                             ),
                           ),
                         ],
+                      ),
+                      Text(
+                        "Saldo disponível",
+                        style: TextStyle(fontSize: 20, color: Colors.black54),
                       ),
                     ],
                   ),
@@ -97,45 +120,112 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
 
-      body: Center(child: Text("Conteúdo")),
-
-      bottomNavigationBar: Container(
-        margin: const EdgeInsets.all(12),
-        padding: const EdgeInsets.symmetric(vertical: 12),
-        decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 45, 45, 45),
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-
+      body: Padding(
+        padding: const EdgeInsets.only(top: 25),
+        child: Column(
           children: [
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.trending_up),
-              color: Colors.white,
-              iconSize: 30,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Material(
+                  color: Colors.transparent,
+                  child: InkWell(
+                    onTap: () {},
+                    borderRadius: BorderRadius.circular(20),
+
+                    splashColor: const Color.fromARGB(100, 100, 100, 100),
+
+                    child: Ink(
+                      height: 80,
+                      width: 190,
+
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 216, 216, 216),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+
+                        children: [
+                          Icon(Icons.add_circle_outline),
+                          const SizedBox(width: 10),
+                          Text("Adicionar ganho"),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 25),
+                Material(
+                  color: Colors.transparent,
+                  child: InkWell(
+                    onTap: () {},
+                    borderRadius: BorderRadius.circular(20),
+
+                    splashColor: const Color.fromARGB(100, 100, 100, 100),
+
+                    child: Ink(
+                      height: 80,
+                      width: 80,
+
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 216, 216, 216),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+
+                        children: [Icon(Icons.settings)],
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(width: 25),
+
+                Material(
+                  color: Colors.transparent,
+                  child: InkWell(
+                    onTap: () {},
+                    borderRadius: BorderRadius.circular(20),
+
+                    splashColor: const Color.fromARGB(100, 100, 100, 100),
+
+                    child: Ink(
+                      height: 80,
+                      width: 190,
+
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 216, 216, 216),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+
+                        children: [
+                          Icon(Icons.remove_circle_outline),
+                          const SizedBox(width: 10),
+                          Text("Adicionar gasto"),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
 
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.calendar_month),
-              color: Colors.white,
-              iconSize: 30,
-            ),
+            const SizedBox(height: 25),
 
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.receipt_long_outlined),
-              color: Colors.white,
-              iconSize: 30,
-            ),
-
-            IconButton(
-              onPressed: () {},
-              icon: const Icon(Icons.grid_view_rounded),
-              color: Colors.white,
-              iconSize: 30,
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 216, 216, 216),
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(40)),
+                ),
+                padding: const EdgeInsets.all(20),
+              ),
             ),
           ],
         ),
