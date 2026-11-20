@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(),
       home: const HomePage(
-        user: UserModel(name: "Marcos Pereira", saldoInicial: 65.21),
+        user: UserModel(name: "Marcos Vinicius", saldoInicial: 1570),
       ),
     );
   }
