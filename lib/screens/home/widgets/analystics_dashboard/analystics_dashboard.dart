@@ -1,5 +1,5 @@
-import 'package:app_financeiro_autoral/screens/home/analystics_dashboard/selector_dashboard.dart';
-import 'package:app_financeiro_autoral/screens/home/home_settings/home_page_colors.dart';
+import 'package:app_financeiro_autoral/screens/home/widgets/analystics_dashboard/selector_dashboard.dart';
+import 'package:app_financeiro_autoral/screens/home/settings/home_page_colors.dart';
 import 'package:flutter/material.dart';
 
 class AnalysticsDashboard extends StatefulWidget {

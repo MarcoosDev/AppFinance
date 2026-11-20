@@ -1,4 +1,4 @@
-import 'package:app_financeiro_autoral/screens/home/home_settings/home_page_colors.dart';
+import 'package:app_financeiro_autoral/screens/home/settings/home_page_colors.dart';
 import 'package:flutter/material.dart';
 
 class BottonsHomeCenter extends StatelessWidget {

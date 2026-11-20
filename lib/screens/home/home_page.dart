@@ -1,8 +1,8 @@
 import 'package:app_financeiro_autoral/models/user_model.dart';
-import 'package:app_financeiro_autoral/screens/home/analystics_dashboard/analystics_dashboard.dart';
-import 'package:app_financeiro_autoral/screens/home/home_bottons/bottons_home.dart';
-import 'package:app_financeiro_autoral/screens/home/home_app_bar/home_app_bar.dart';
-import 'package:app_financeiro_autoral/screens/home/home_settings/home_page_colors.dart';
+import 'package:app_financeiro_autoral/screens/home/widgets/analystics_dashboard/analystics_dashboard.dart';
+import 'package:app_financeiro_autoral/screens/home/widgets/home_bottons/bottons_home.dart';
+import 'package:app_financeiro_autoral/screens/home/widgets/home_app_bar/home_app_bar.dart';
+import 'package:app_financeiro_autoral/screens/home/settings/home_page_colors.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
