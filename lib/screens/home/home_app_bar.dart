@@ -31,7 +31,7 @@ class HomeAppBar extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    user.name,
+                    '${user.name}!',
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -86,11 +86,7 @@ class HomeAppBar extends StatelessWidget {
                         ),
                       ),
                       Text(
-                        ',' +
-                            ((user.saldoInicial % 1) * 100)
-                                .round()
-                                .toString()
-                                .padLeft(2, '0'),
+                        ", ${((user.saldoInicial % 1) * 100).round().toString().padLeft(2, '0')}",
                         style: TextStyle(
                           fontSize: 30,
                           fontFamily: "Gothic",
