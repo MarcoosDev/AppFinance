@@ -1,4 +1,5 @@
-import 'package:app_financeiro_autoral/screens/home_page.dart';
+import 'package:app_financeiro_autoral/models/user_model.dart';
+import 'package:app_financeiro_autoral/screens/home/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -7,13 +8,16 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(),
-      home: const HomePage(title: 'APP Fincenceiro'),
+      home: const HomePage(
+        user: UserModel(name: "Marcos Vinicius", saldoInicial: 00.0),
+      ),
     );
   }
 }
+
+//corrigir o sistema de temas. crie categorias de tudo, esqueça flutter e va para o figma planejar
