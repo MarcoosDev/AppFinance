@@ -1,4 +1,4 @@
-import 'package:app_financeiro_autoral/screens/home/settings/home_page_colors.dart';
+import 'package:app_financeiro_autoral/settings/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class SelectorDashboard extends StatefulWidget {
@@ -11,7 +11,7 @@ class SelectorDashboard extends StatefulWidget {
 class _SelectorDashboard extends State<SelectorDashboard> {
   Alignment selectTypeGraphic = Alignment.centerLeft;
 
-  static Color colorIcons = theme.background3;
+  static Color colorIcons = theme.iconsButtonsFlutuant;
   static Color colorSelector = theme.primary;
 
   bool receiptLongClicked = true;

@@ -1,5 +1,5 @@
 import 'package:app_financeiro_autoral/screens/home/widgets/analystics_dashboard/selector_dashboard.dart';
-import 'package:app_financeiro_autoral/screens/home/settings/home_page_colors.dart';
+import 'package:app_financeiro_autoral/settings/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class AnalysticsDashboard extends StatefulWidget {
@@ -20,7 +20,7 @@ class _AnalysticsDashboard extends State<AnalysticsDashboard> {
           Positioned.fill(
             child: Container(
               decoration: BoxDecoration(
-                color: theme.background3,
+                color: theme.backgroundAnalystics,
                 borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
               ),
               padding: const EdgeInsets.all(20),

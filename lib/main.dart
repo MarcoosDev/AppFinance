@@ -1,5 +1,4 @@
-import 'package:app_financeiro_autoral/models/user_model.dart';
-import 'package:app_financeiro_autoral/screens/home/home_page.dart';
+import 'package:app_financeiro_autoral/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,14 +9,10 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Flutter Demo',
       theme: ThemeData(),
-      home: const HomePage(
-        user: UserModel(name: "Marcos Vinicius", saldoInicial: 1570),
-      ),
+      routerConfig: router,
     );
   }
 }
-
-//corrigir o sistema de temas. crie categorias de tudo, esqueça flutter e va para o figma planejar

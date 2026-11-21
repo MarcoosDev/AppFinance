@@ -1,6 +1,7 @@
 import 'package:app_financeiro_autoral/models/user_model.dart';
-import 'package:app_financeiro_autoral/screens/home/settings/home_page_colors.dart';
+import 'package:app_financeiro_autoral/settings/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
 
 class HomeAppBar extends StatelessWidget {
@@ -56,7 +57,7 @@ class HomeAppBar extends StatelessWidget {
                         ],
                       ),
                       Text(
-                        'bem vindo a sua previsão financeira!',
+                        'Que bom ter você por aqui!',
                         style: TextStyle(
                           fontSize: 18,
                           color: theme.text,
@@ -81,13 +82,15 @@ class HomeAppBar extends StatelessWidget {
                       ),
                     ),
                   ),
+
                   const SizedBox(width: 10),
+
                   Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(50),
                     ),
                     child: IconButton(
-                      onPressed: () => {},
+                      onPressed: () => GoRouter.of(context).push("/settings"),
                       icon: Icon(
                         Icons.settings_outlined,
                         size: 30,
