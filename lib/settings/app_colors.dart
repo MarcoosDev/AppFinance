@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class AppColors {
   static const roxo = ColorTheme(
     background: Color.fromRGBO(40, 40, 40, 1),
-    backgroundAnalystics: Color.fromRGBO(211, 211, 211, 1),
+    backgroundAnalytics: Color.fromRGBO(211, 211, 211, 1),
     backgroundButtonsFlutuant: Color.fromARGB(255, 62, 62, 62),
     primary: Color.fromARGB(255, 160, 126, 183),
     icons: Color.fromRGBO(40, 40, 40, 1),
@@ -14,7 +14,7 @@ class AppColors {
 
   static const amarelo = ColorTheme(
     background: Color.fromRGBO(40, 40, 40, 1),
-    backgroundAnalystics: Color.fromRGBO(211, 211, 211, 1),
+    backgroundAnalytics: Color.fromRGBO(211, 211, 211, 1),
     backgroundButtonsFlutuant: Color.fromARGB(255, 62, 62, 62),
     primary: Color.fromARGB(255, 182, 182, 15),
     icons: Color.fromRGBO(40, 40, 40, 1),
@@ -25,7 +25,7 @@ class AppColors {
 
   static const verde = ColorTheme(
     background: Color.fromRGBO(40, 40, 40, 1),
-    backgroundAnalystics: Color.fromRGBO(211, 211, 211, 1),
+    backgroundAnalytics: Color.fromRGBO(211, 211, 211, 1),
 
     backgroundButtonsFlutuant: Color.fromARGB(255, 62, 62, 62),
     primary: Color.fromARGB(255, 23, 182, 15),
@@ -37,7 +37,7 @@ class AppColors {
 
   static const rosa = ColorTheme(
     background: Color.fromRGBO(40, 40, 40, 1),
-    backgroundAnalystics: Color.fromRGBO(211, 211, 211, 1),
+    backgroundAnalytics: Color.fromRGBO(211, 211, 211, 1),
 
     backgroundButtonsFlutuant: Color.fromARGB(255, 62, 62, 62),
     primary: Color.fromARGB(255, 149, 57, 145),
@@ -50,7 +50,7 @@ class AppColors {
 
 class ColorTheme {
   final Color background;
-  final Color backgroundAnalystics;
+  final Color backgroundAnalytics;
   final Color primary;
   final Color icons;
   final Color text;
@@ -61,7 +61,7 @@ class ColorTheme {
 
   const ColorTheme({
     required this.background,
-    required this.backgroundAnalystics,
+    required this.backgroundAnalytics,
     required this.backgroundButtonsFlutuant,
     required this.primary,
     required this.icons,

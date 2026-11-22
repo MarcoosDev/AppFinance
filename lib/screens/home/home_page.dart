@@ -1,6 +1,6 @@
 import 'package:app_financeiro_autoral/models/user_model.dart';
-import 'package:app_financeiro_autoral/screens/home/widgets/analystics_dashboard/analystics_dashboard.dart';
-import 'package:app_financeiro_autoral/screens/home/widgets/home_bottons/bottons_home.dart';
+import 'package:app_financeiro_autoral/screens/home/widgets/analytics_dashboard/analytics_dashboard.dart';
+import 'package:app_financeiro_autoral/screens/home/widgets/home_buttons/buttons_home.dart';
 import 'package:app_financeiro_autoral/screens/home/widgets/home_app_bar/home_app_bar.dart';
 import 'package:app_financeiro_autoral/settings/app_colors.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             BottonsHomeCenter(),
             const SizedBox(height: 50),
-            Expanded(child: AnalysticsDashboard()),
+            Expanded(child: AnalyticsDashboard()),
           ],
         ),
       ),

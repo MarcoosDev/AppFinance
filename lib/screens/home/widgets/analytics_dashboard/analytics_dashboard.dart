@@ -1,36 +1,20 @@
-import 'package:app_financeiro_autoral/screens/home/widgets/analystics_dashboard/selector_dashboard.dart';
-import 'package:app_financeiro_autoral/screens/home/widgets/analystics_dashboard/types_dashboard.dart';
+import 'package:app_financeiro_autoral/screens/home/widgets/analytics_dashboard/widgets/selector/selector_dashboard.dart';
+import 'package:app_financeiro_autoral/screens/home/widgets/analytics_dashboard/types_dashboard.dart';
 import 'package:app_financeiro_autoral/settings/app_colors.dart';
 import 'package:flutter/material.dart';
 
-class AnalysticsDashboard extends StatefulWidget {
-  const AnalysticsDashboard({super.key});
+class AnalyticsDashboard extends StatefulWidget {
+  const AnalyticsDashboard({super.key});
   @override
-  State<AnalysticsDashboard> createState() => _AnalysticsDashboard();
+  State<AnalyticsDashboard> createState() => _AnalyticsDashboard();
 }
 
-class _AnalysticsDashboard extends State<AnalysticsDashboard> {
+class _AnalyticsDashboard extends State<AnalyticsDashboard> {
   DashboardType dashboardType = DashboardType.receipts;
 
-  Color teee = theme.backgroundAnalystics;
-
-  List<Color> colorDash = [
-    Colors.amber,
-    Colors.black,
-    theme.backgroundAnalystics,
-  ];
   void setTypeDashboard(DashboardType type) {
     setState(() {
       dashboardType = type;
-      if (dashboardType == DashboardType.trends) {
-        teee = colorDash[0];
-      }
-      if (dashboardType == DashboardType.calendar) {
-        teee = colorDash[1];
-      }
-      if (dashboardType == DashboardType.receipts) {
-        teee = colorDash[2];
-      }
     });
   }
 
@@ -43,12 +27,11 @@ class _AnalysticsDashboard extends State<AnalysticsDashboard> {
           builder: (context, constraints) {
             return Container(
               decoration: BoxDecoration(
-                color: teee,
+                color: theme.backgroundAnalytics,
                 borderRadius: const BorderRadius.vertical(
                   top: Radius.circular(30),
                 ),
               ),
-              padding: EdgeInsets.all(constraints.maxHeight),
             );
           },
         ),
