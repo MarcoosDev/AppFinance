@@ -96,7 +96,7 @@ class _SelectorDashboard extends State<SelectorDashboard> {
                     calendarMothClicked = false;
                     trendingUpClicked = true;
                     selectTypeGraphic = Alignment.centerRight;
-                    widget.onChanged(DashboardType.calendar);
+                    widget.onChanged(DashboardType.trends);
                   });
                 },
               ),

@@ -12,9 +12,25 @@ class AnalysticsDashboard extends StatefulWidget {
 class _AnalysticsDashboard extends State<AnalysticsDashboard> {
   DashboardType dashboardType = DashboardType.receipts;
 
+  Color teee = theme.backgroundAnalystics;
+
+  List<Color> colorDash = [
+    Colors.amber,
+    Colors.black,
+    theme.backgroundAnalystics,
+  ];
   void setTypeDashboard(DashboardType type) {
     setState(() {
       dashboardType = type;
+      if (dashboardType == DashboardType.trends) {
+        teee = colorDash[0];
+      }
+      if (dashboardType == DashboardType.calendar) {
+        teee = colorDash[1];
+      }
+      if (dashboardType == DashboardType.receipts) {
+        teee = colorDash[2];
+      }
     });
   }
 
@@ -27,7 +43,7 @@ class _AnalysticsDashboard extends State<AnalysticsDashboard> {
           builder: (context, constraints) {
             return Container(
               decoration: BoxDecoration(
-                color: theme.backgroundAnalystics,
+                color: teee,
                 borderRadius: const BorderRadius.vertical(
                   top: Radius.circular(30),
                 ),
