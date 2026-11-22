@@ -70,6 +70,7 @@ class _HomeActionButton extends StatelessWidget {
                     style: TextStyle(
                       color: theme.iconsButtonsFlutuant,
                       fontSize: 20,
+                      fontFamily: "NotoSansCypriot",
                       fontWeight: FontWeight.bold,
                     ),
                   ),

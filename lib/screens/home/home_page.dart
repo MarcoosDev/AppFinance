@@ -31,7 +31,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             BottonsHomeCenter(),
             const SizedBox(height: 50),
-            AnalysticsDashboard(),
+            Expanded(child: AnalysticsDashboard()),
           ],
         ),
       ),

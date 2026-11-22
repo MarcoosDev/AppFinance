@@ -57,32 +57,58 @@ flutter:
   assets:
     - assets/icons/
   fonts:
-    - family: Oswald
-      fonts:
-        - asset: assets/fonts/oswald/Oswald-Regular.ttf
-          weight: 400
-        - asset: assets/fonts/oswald/Oswald-Medium.ttf
-          weight: 500
-        - asset: assets/fonts/oswald/Oswald-Bold.ttf
-          weight: 700
-
-    - family: Gothic
-      fonts:
-        - asset: assets/fonts/gothic/ScienceGothic-Regular.ttf
-          weight: 400
-        - asset: assets/fonts/gothic/ScienceGothic-Medium.ttf
-          weight: 500
-        - asset: assets/fonts/gothic/ScienceGothic-Bold.ttf
-          weight: 700
-
-    - family: Bomb
-      fonts:
-        - asset: assets\fonts\cherry_bomb_one\CherryBombOne-Regular.ttf
-          weight: 400
 
     - family: Coiny
       fonts:
         - asset: assets\fonts\coiny\Coiny-Regular.ttf
+          weight: 400
+
+    - family: Prompt
+      fonts:
+        - asset: assets/fonts/Prompt/Prompt-Thin.ttf
+          weight: 100
+        - asset: assets/fonts/Prompt/Prompt-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/Prompt/Prompt-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Prompt/Prompt-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Prompt/Prompt-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Prompt/Prompt-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Prompt/Prompt-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Prompt/Prompt-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Prompt/Prompt-Black.ttf
+          weight: 900
+
+    - family: MuktaMalar
+      fonts:
+        - asset: assets/fonts/Mukta_Malar/MuktaMalar-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/Mukta_Malar/MuktaMalar-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Mukta_Malar/MuktaMalar-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Mukta_Malar/MuktaMalar-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Mukta_Malar/MuktaMalar-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Mukta_Malar/MuktaMalar-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Mukta_Malar/MuktaMalar-ExtraBold.ttf
+          weight: 800
+
+    - family: NotoSansCypriot
+      fonts:
+        - asset: assets/fonts/Noto_Sans_Cypriot/NotoSansCypriot-Regular.ttf
+          weight: 400
+
+    - family: TitanOne
+      fonts:
+        - asset: assets/fonts/Titan_One/TitanOne-Regular.ttf
           weight: 400
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

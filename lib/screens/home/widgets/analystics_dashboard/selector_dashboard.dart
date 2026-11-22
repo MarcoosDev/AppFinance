@@ -1,8 +1,11 @@
+import 'package:app_financeiro_autoral/screens/home/widgets/analystics_dashboard/types_dashboard.dart';
 import 'package:app_financeiro_autoral/settings/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class SelectorDashboard extends StatefulWidget {
-  const SelectorDashboard({super.key});
+  const SelectorDashboard({super.key, required this.onChanged});
+  final ValueChanged<DashboardType> onChanged;
 
   @override
   State<SelectorDashboard> createState() => _SelectorDashboard();
@@ -53,114 +56,95 @@ class _SelectorDashboard extends State<SelectorDashboard> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Expanded(
-                child: InkWell(
-                  borderRadius: BorderRadius.circular(20),
-                  onTap: () {
-                    setState(() {
-                      receiptLongClicked = true;
-                      calendarMothClicked = false;
-                      trendingUpClicked = false;
-                      selectTypeGraphic = Alignment.centerLeft;
-                    });
-                  },
-                  child: SizedBox(
-                    height: 100,
-                    width: 50,
-
-                    child: Center(
-                      child: TweenAnimationBuilder<double>(
-                        tween: Tween<double>(
-                          begin: 1.0,
-                          end: receiptLongClicked ? 1.3 : 1.0,
-                        ),
-                        duration: const Duration(milliseconds: 200),
-                        curve: Curves.easeOut,
-                        builder: (context, scale, child) {
-                          return Transform.scale(
-                            scale: scale,
-                            child: Icon(Icons.receipt_long, color: colorIcons),
-                          );
-                        },
-                      ),
-                    ),
-                  ),
-                ),
+              DashboardSelectorButton(
+                icon: Icons.receipt_long,
+                isSelected: receiptLongClicked,
+                color: colorIcons,
+                onTap: () {
+                  setState(() {
+                    receiptLongClicked = true;
+                    calendarMothClicked = false;
+                    trendingUpClicked = false;
+                    selectTypeGraphic = Alignment.centerLeft;
+                    widget.onChanged(DashboardType.receipts);
+                  });
+                },
               ),
 
-              Expanded(
-                child: InkWell(
-                  borderRadius: BorderRadius.circular(20),
-                  onTap: () {
-                    setState(() {
-                      receiptLongClicked = false;
-                      calendarMothClicked = true;
-                      trendingUpClicked = false;
-                      selectTypeGraphic = Alignment.center;
-                    });
-                  },
-                  child: SizedBox(
-                    height: 100,
-                    width: 50,
-                    child: Center(
-                      child: TweenAnimationBuilder<double>(
-                        tween: Tween<double>(
-                          begin: 1.0,
-                          end: calendarMothClicked ? 1.3 : 1.0,
-                        ),
-                        duration: const Duration(milliseconds: 200),
-                        curve: Curves.easeOut,
-                        builder: (context, scale, child) {
-                          return Transform.scale(
-                            scale: scale,
-                            child: Icon(
-                              Icons.calendar_month,
-                              color: colorIcons,
-                            ),
-                          );
-                        },
-                      ),
-                    ),
-                  ),
-                ),
+              DashboardSelectorButton(
+                icon: Icons.calendar_month,
+                isSelected: calendarMothClicked,
+                color: colorIcons,
+                onTap: () {
+                  setState(() {
+                    receiptLongClicked = false;
+                    calendarMothClicked = true;
+                    trendingUpClicked = false;
+                    selectTypeGraphic = Alignment.center;
+                    widget.onChanged(DashboardType.calendar);
+                  });
+                },
               ),
 
-              Expanded(
-                child: InkWell(
-                  borderRadius: BorderRadius.circular(20),
-                  onTap: () {
-                    setState(() {
-                      receiptLongClicked = false;
-                      calendarMothClicked = false;
-                      trendingUpClicked = true;
-                      selectTypeGraphic = Alignment.centerRight;
-                    });
-                  },
-                  child: SizedBox(
-                    height: 100,
-                    width: 50,
-                    child: Center(
-                      child: TweenAnimationBuilder<double>(
-                        tween: Tween<double>(
-                          begin: 1.0,
-                          end: trendingUpClicked ? 1.3 : 1.0,
-                        ),
-                        duration: const Duration(milliseconds: 200),
-                        curve: Curves.easeOut,
-                        builder: (context, scale, child) {
-                          return Transform.scale(
-                            scale: scale,
-                            child: Icon(Icons.trending_up, color: colorIcons),
-                          );
-                        },
-                      ),
-                    ),
-                  ),
-                ),
+              DashboardSelectorButton(
+                icon: Icons.trending_up,
+                isSelected: trendingUpClicked,
+                color: colorIcons,
+                onTap: () {
+                  setState(() {
+                    receiptLongClicked = false;
+                    calendarMothClicked = false;
+                    trendingUpClicked = true;
+                    selectTypeGraphic = Alignment.centerRight;
+                    widget.onChanged(DashboardType.calendar);
+                  });
+                },
               ),
             ],
           ),
         ],
+      ),
+    );
+  }
+}
+
+class DashboardSelectorButton extends StatelessWidget {
+  const DashboardSelectorButton({
+    super.key,
+    required this.icon,
+    required this.isSelected,
+    required this.onTap,
+    required this.color,
+  });
+
+  final IconData icon;
+  final bool isSelected;
+  final VoidCallback onTap;
+  final Color color;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: InkWell(
+        borderRadius: BorderRadius.circular(20),
+        onTap: onTap,
+        child: SizedBox(
+          height: 100,
+          width: 50,
+          child: Center(
+            child: TweenAnimationBuilder<double>(
+              tween: Tween<double>(begin: 1.0, end: isSelected ? 1.3 : 1.0),
+              duration: const Duration(milliseconds: 200),
+              curve: Curves.easeOut,
+              builder: (context, scale, child) {
+                return Transform.scale(
+                  scale: scale,
+                  child: Icon(icon, color: color),
+                );
+              },
+            ),
+          ),
+        ),
       ),
     );
   }

@@ -42,7 +42,7 @@ class HomeAppBar extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 25,
                               color: theme.text,
-                              fontFamily: "Arial",
+                              fontFamily: "NotoSansCypriot",
                             ),
                           ),
                           Text(
@@ -51,7 +51,7 @@ class HomeAppBar extends StatelessWidget {
                               fontSize: 25,
                               fontWeight: FontWeight.bold,
                               color: theme.text,
-                              fontFamily: "Arial",
+                              fontFamily: "NotoSansCypriot",
                             ),
                           ),
                         ],
@@ -61,7 +61,7 @@ class HomeAppBar extends StatelessWidget {
                         style: TextStyle(
                           fontSize: 18,
                           color: theme.text,
-                          fontFamily: "Arial",
+                          fontFamily: "NotoSansCypriot",
                         ),
                       ),
                     ],
@@ -101,47 +101,38 @@ class HomeAppBar extends StatelessWidget {
                 ],
               ),
 
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.baseline,
-                    textBaseline: TextBaseline.alphabetic,
+              const SizedBox(height: 25),
 
-                    children: [
-                      Text(
-                        NumberFormat(
-                          '#,##0',
-                          'pt_BR',
-                        ).format(user.saldoInicial),
-                        style: TextStyle(
-                          fontSize: 90,
-                          fontWeight: FontWeight.normal,
-                          fontFamily: "Coiny",
-                          color: theme.text,
-                        ),
+              FittedBox(
+                fit: BoxFit.scaleDown,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.baseline,
+                  textBaseline: TextBaseline.alphabetic,
+                  children: [
+                    Text(
+                      NumberFormat(
+                        'R\$#,##0',
+                        'pt_BR',
+                      ).format(user.saldoInicial),
+                      style: TextStyle(
+                        fontSize: 60,
+                        fontWeight: FontWeight.normal,
+                        fontFamily: "TitanOne",
+                        color: theme.text,
                       ),
-                      Text(
-                        ",${((user.saldoInicial % 1) * 100).round().toString().padLeft(2, '0')}",
-                        style: TextStyle(
-                          fontSize: 50,
-                          fontFamily: "Coiny",
-                          fontWeight: FontWeight.w200,
-                          color: theme.text.withAlpha(250),
-                        ),
+                    ),
+                    Text(
+                      ",${((user.saldoInicial % 1) * 100).round().toString().padLeft(2, '0')}",
+                      style: TextStyle(
+                        fontSize: 50,
+                        fontFamily: "TitanOne",
+                        fontWeight: FontWeight.w200,
+                        color: theme.text.withAlpha(250),
                       ),
-                    ],
-                  ),
-
-                  Text(
-                    "Saldo disponível",
-                    style: TextStyle(fontSize: 20, color: theme.text),
-                  ),
-                ],
+                    ),
+                  ],
+                ),
               ),
-
-              Spacer(),
             ],
           ),
         ),
