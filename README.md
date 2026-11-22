@@ -37,7 +37,7 @@ O projeto está em desenvolvimento. Atualmente, há uma tela inicial com dados d
 
 ### Demonstração da animação da Dashboard
 
-![Demonstração do App Financeiro](docs\gif\Animação_dashboard.gif)
+![Demonstração do App Financeiro](docs\gif\animacao_dashboard.gif)
 
 ## Tecnologias
 
