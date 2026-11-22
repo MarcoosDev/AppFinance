@@ -35,9 +35,9 @@ O projeto está em desenvolvimento. Atualmente, há uma tela inicial com dados d
 
 ![Tela inicial do App Financeiro](docs/images/print_home_page.png)
 
-### Demonstração em vídeo da animação da Dashboard
+### Demonstração da animação da Dashboard
 
-[![Assista à demonstração](docs/images/print_home_page.png)](docs/video/animation_bashboard.mp4)
+![Demonstração do App Financeiro](docs\gif\Animação_dashboard.gif)
 
 ## Tecnologias
 
