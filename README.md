@@ -35,8 +35,6 @@ O projeto está em desenvolvimento. Atualmente, há uma tela inicial com dados d
 - `intl` para formatação de valores
 - `flutter_svg` para suporte a ícones SVG
 
-uivo [LICENSE](LICENSE) para mais detalhes.
-
 ## Executar o projeto
 
 Com o Flutter instalado, execute:
