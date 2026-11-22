@@ -29,6 +29,16 @@ As previsões serão estimativas baseadas nas informações registradas pelo usu
 
 O projeto está em desenvolvimento. Atualmente, há uma tela inicial com dados de exemplo e elementos visuais para ganhos, gastos e seleção do dashboard. Os registros, cálculos de previsão e persistência de dados ainda precisam ser implementados.
 
+## Capturas de tela
+
+### Tela inicial
+
+![Tela inicial do App Financeiro](docs/images/print_home_page.png)
+
+### Demonstração em vídeo da animação da Dashboard
+
+[![Assista à demonstração](docs/images/print_home_page.png)](docs/video/animation_bashboard.mp4)
+
 ## Tecnologias
 
 - Flutter e Dart
@@ -42,7 +52,8 @@ Com o Flutter instalado, execute:
 ```bash
 flutter pub get
 flutter run
-````
+```
+
 ## Licença
 
 Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
