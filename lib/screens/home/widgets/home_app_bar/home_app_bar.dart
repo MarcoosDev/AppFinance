@@ -1,5 +1,5 @@
 import 'package:app_financeiro_autoral/models/user_model.dart';
-import 'package:app_financeiro_autoral/settings/app_colors.dart';
+import 'package:app_financeiro_autoral/config/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:intl/intl.dart';
@@ -56,14 +56,6 @@ class HomeAppBar extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Text(
-                        'Que bom ter você por aqui!',
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: theme.text,
-                          fontFamily: "NotoSansCypriot",
-                        ),
-                      ),
                     ],
                   ),
                   Spacer(),
@@ -103,34 +95,52 @@ class HomeAppBar extends StatelessWidget {
 
               const SizedBox(height: 25),
 
-              FittedBox(
-                fit: BoxFit.scaleDown,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.baseline,
-                  textBaseline: TextBaseline.alphabetic,
-                  children: [
-                    Text(
-                      NumberFormat(
-                        'R\$#,##0',
-                        'pt_BR',
-                      ).format(user.saldoInicial),
-                      style: TextStyle(
-                        fontSize: 60,
-                        fontWeight: FontWeight.normal,
-                        fontFamily: "TitanOne",
-                        color: theme.text,
+              Center(
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.baseline,
+                    textBaseline: TextBaseline.alphabetic,
+                    children: [
+                      Column(
+                        children: [
+                          Row(
+                            children: [
+                              Text(
+                                NumberFormat(
+                                  'R\$#,##0',
+                                  'pt_BR',
+                                ).format(user.saldoInicial),
+                                style: TextStyle(
+                                  fontSize: 60,
+                                  fontWeight: FontWeight.normal,
+                                  fontFamily: "TitanOne",
+                                  color: theme.text,
+                                ),
+                              ),
+                              Text(
+                                ",${((user.saldoInicial % 1) * 100).round().toString().padLeft(2, '0')}",
+                                style: TextStyle(
+                                  fontSize: 50,
+                                  fontFamily: "TitanOne",
+                                  fontWeight: FontWeight.w200,
+                                  color: theme.text.withAlpha(250),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Text(
+                            'Saldo Disponivel',
+                            style: TextStyle(
+                              fontSize: 18,
+                              color: theme.text,
+                              fontFamily: "NotoSansCypriot",
+                            ),
+                          ),
+                        ],
                       ),
-                    ),
-                    Text(
-                      ",${((user.saldoInicial % 1) * 100).round().toString().padLeft(2, '0')}",
-                      style: TextStyle(
-                        fontSize: 50,
-                        fontFamily: "TitanOne",
-                        fontWeight: FontWeight.w200,
-                        color: theme.text.withAlpha(250),
-                      ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ],

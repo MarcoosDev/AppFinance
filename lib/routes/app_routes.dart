@@ -4,8 +4,8 @@ import 'package:app_financeiro_autoral/screens/settings/settings.dart';
 import 'package:go_router/go_router.dart';
 
 final UserModel us = UserModel(
-  name: "Livia Sophia",
-  saldoInicial: 12548.25,
+  name: "Marcos Vinicius",
+  saldoInicial: 572.24,
   corThema: PreferenceColor.roxo,
 ); //Isso é temporario
 

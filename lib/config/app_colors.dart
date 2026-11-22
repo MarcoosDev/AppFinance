@@ -71,4 +71,4 @@ class ColorTheme {
   });
 }
 
-final ColorTheme theme = AppColors.rosa;
+final ColorTheme theme = AppColors.verde;

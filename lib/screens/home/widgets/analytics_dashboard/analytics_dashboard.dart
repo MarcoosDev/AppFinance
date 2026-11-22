@@ -1,6 +1,6 @@
 import 'package:app_financeiro_autoral/screens/home/widgets/analytics_dashboard/widgets/selector/selector_dashboard.dart';
 import 'package:app_financeiro_autoral/screens/home/widgets/analytics_dashboard/types_dashboard.dart';
-import 'package:app_financeiro_autoral/settings/app_colors.dart';
+import 'package:app_financeiro_autoral/config/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class AnalyticsDashboard extends StatefulWidget {

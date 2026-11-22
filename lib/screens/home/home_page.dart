@@ -2,7 +2,7 @@ import 'package:app_financeiro_autoral/models/user_model.dart';
 import 'package:app_financeiro_autoral/screens/home/widgets/analytics_dashboard/analytics_dashboard.dart';
 import 'package:app_financeiro_autoral/screens/home/widgets/home_buttons/buttons_home.dart';
 import 'package:app_financeiro_autoral/screens/home/widgets/home_app_bar/home_app_bar.dart';
-import 'package:app_financeiro_autoral/settings/app_colors.dart';
+import 'package:app_financeiro_autoral/config/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
