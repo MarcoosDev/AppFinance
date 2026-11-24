@@ -5,10 +5,10 @@ class AppColors {
     background: Color.fromRGBO(40, 40, 40, 1),
     backgroundAnalytics: Color.fromRGBO(211, 211, 211, 1),
     backgroundButtonsFlutuant: Color.fromARGB(255, 62, 62, 62),
-    primary: Color.fromARGB(255, 160, 126, 183),
-    icons: Color.fromRGBO(40, 40, 40, 1),
+    primary: Color.fromARGB(255, 100, 25, 153),
+    icons: Color.fromARGB(255, 222, 222, 222),
     iconsButtonsFlutuant: Color.fromARGB(255, 222, 222, 222),
-    text: Color.fromRGBO(40, 40, 40, 1),
+    text: Color.fromARGB(255, 216, 216, 216),
     text2: Color.fromARGB(255, 216, 216, 216),
   );
 
@@ -16,7 +16,7 @@ class AppColors {
     background: Color.fromRGBO(40, 40, 40, 1),
     backgroundAnalytics: Color.fromRGBO(211, 211, 211, 1),
     backgroundButtonsFlutuant: Color.fromARGB(255, 62, 62, 62),
-    primary: Color.fromARGB(255, 182, 182, 15),
+    primary: Color.fromARGB(255, 175, 168, 31),
     icons: Color.fromRGBO(40, 40, 40, 1),
     iconsButtonsFlutuant: Color.fromARGB(255, 222, 222, 222),
     text: Color.fromRGBO(40, 40, 40, 1),
@@ -26,9 +26,8 @@ class AppColors {
   static const verde = ColorTheme(
     background: Color.fromRGBO(40, 40, 40, 1),
     backgroundAnalytics: Color.fromRGBO(211, 211, 211, 1),
-
     backgroundButtonsFlutuant: Color.fromARGB(255, 62, 62, 62),
-    primary: Color.fromARGB(255, 23, 182, 15),
+    primary: Color.fromARGB(255, 31, 175, 38),
     icons: Color.fromRGBO(40, 40, 40, 1),
     iconsButtonsFlutuant: Color.fromARGB(255, 222, 222, 222),
     text: Color.fromRGBO(40, 40, 40, 1),
@@ -38,9 +37,32 @@ class AppColors {
   static const rosa = ColorTheme(
     background: Color.fromRGBO(40, 40, 40, 1),
     backgroundAnalytics: Color.fromRGBO(211, 211, 211, 1),
-
     backgroundButtonsFlutuant: Color.fromARGB(255, 62, 62, 62),
     primary: Color.fromARGB(255, 149, 57, 145),
+    icons: Color.fromARGB(255, 222, 222, 222),
+    iconsButtonsFlutuant: Color.fromARGB(255, 222, 222, 222),
+    text: Color.fromARGB(255, 216, 216, 216),
+    text2: Color.fromARGB(255, 216, 216, 216),
+  );
+
+  static const vermelho = ColorTheme(
+    background: Color.fromRGBO(40, 40, 40, 1),
+    backgroundAnalytics: Color.fromRGBO(211, 211, 211, 1),
+
+    backgroundButtonsFlutuant: Color.fromARGB(255, 62, 62, 62),
+    primary: Color.fromARGB(255, 153, 25, 25),
+    icons: Color.fromARGB(255, 222, 222, 222),
+    iconsButtonsFlutuant: Color.fromARGB(255, 222, 222, 222),
+    text: Color.fromARGB(255, 216, 216, 216),
+    text2: Color.fromARGB(255, 216, 216, 216),
+  );
+
+  static const azul = ColorTheme(
+    background: Color.fromRGBO(40, 40, 40, 1),
+    backgroundAnalytics: Color.fromRGBO(211, 211, 211, 1),
+
+    backgroundButtonsFlutuant: Color.fromARGB(255, 62, 62, 62),
+    primary: Color.fromARGB(255, 31, 25, 153),
     icons: Color.fromARGB(255, 222, 222, 222),
     iconsButtonsFlutuant: Color.fromARGB(255, 222, 222, 222),
     text: Color.fromARGB(255, 216, 216, 216),
@@ -71,4 +93,4 @@ class ColorTheme {
   });
 }
 
-final ColorTheme theme = AppColors.verde;
+final ColorTheme theme = AppColors.rosa;

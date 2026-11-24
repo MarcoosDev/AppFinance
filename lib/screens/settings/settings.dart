@@ -1,4 +1,4 @@
-import 'package:app_financeiro_autoral/screens/settings/widgets/settings_widget.dart';
+import 'package:app_financeiro_autoral/screens/settings/widgets/options_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:app_financeiro_autoral/config/app_colors.dart';
 

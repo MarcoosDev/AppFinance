@@ -18,7 +18,6 @@ class _SettingsWidgetState extends State<SettingsWidget> {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-
       children: [
         Text(
           widget.label,
@@ -50,6 +49,7 @@ class SettingOption extends StatelessWidget {
         onTap: () => {},
         child: Ink(
           height: 50,
+
           decoration: BoxDecoration(
             color: theme.backgroundButtonsFlutuant,
             borderRadius: BorderRadius.circular(15),
@@ -59,8 +59,8 @@ class SettingOption extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const SizedBox(height: 0),
-              Icon(icon, color: theme.icons),
-              Text(label, style: TextStyle(color: theme.icons)),
+              Icon(icon, color: theme.iconsButtonsFlutuant),
+              Text(label, style: TextStyle(color: theme.iconsButtonsFlutuant)),
             ],
           ),
         ),
