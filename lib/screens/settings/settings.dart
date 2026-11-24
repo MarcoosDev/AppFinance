@@ -1,4 +1,5 @@
 import 'package:app_financeiro_autoral/screens/settings/widgets/options_widgets.dart';
+import 'package:app_financeiro_autoral/screens/settings/widgets/theme_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:app_financeiro_autoral/config/app_colors.dart';
 
@@ -24,12 +25,17 @@ class _SettingsState extends State<Settings> {
       ),
       backgroundColor: theme.background,
       body: SingleChildScrollView(
-        child: SettingsWidget(
-          label: "Geral",
+        child: Column(
           children: [
-            SettingOption(icon: Icons.person, label: "Conta"),
-            SettingOption(icon: Icons.notifications, label: "Notificações"),
-            SettingOption(icon: Icons.color_lens, label: "Cores"),
+            ThemeWidget(),
+            SettingsWidget(
+              label: "Geral",
+              children: [
+                SettingOption(icon: Icons.person, label: "Conta"),
+                SettingOption(icon: Icons.notifications, label: "Notificações"),
+                SettingOption(icon: Icons.color_lens, label: "Cores"),
+              ],
+            ),
           ],
         ),
       ),

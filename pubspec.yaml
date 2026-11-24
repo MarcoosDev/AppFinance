@@ -56,6 +56,8 @@ dev_dependencies:
 flutter:
   assets:
     - assets/icons/
+    - assets/skeletons_theme/
+
   fonts:
 
     - family: Coiny

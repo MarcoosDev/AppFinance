@@ -1,4 +1,5 @@
 import 'package:app_financeiro_autoral/models/user_model.dart';
+import 'package:app_financeiro_autoral/config/enum_colors.dart';
 import 'package:app_financeiro_autoral/screens/home/home_page.dart';
 import 'package:app_financeiro_autoral/screens/settings/settings.dart';
 import 'package:go_router/go_router.dart';
@@ -6,7 +7,7 @@ import 'package:go_router/go_router.dart';
 final UserModel us = UserModel(
   name: "Marcos Vinicius",
   saldoInicial: 572.24,
-  corThema: PreferenceColor.roxo,
+  corThema: OptionsColor.roxo,
 ); //Isso é temporario
 
 GoRouter router = GoRouter(

@@ -1,0 +1,69 @@
+import 'package:app_financeiro_autoral/config/app_colors.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+class ThemeWidget extends StatefulWidget {
+  const ThemeWidget({super.key});
+
+  @override
+  State<ThemeWidget> createState() => _ThemeWidgetState();
+}
+
+class _ThemeWidgetState extends State<ThemeWidget> {
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.all(10),
+      child: Column(
+        spacing: 10,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            spacing: 10,
+            children: [
+              ThemePreview(color: "vermelho"),
+              ThemePreview(color: "verde"),
+              ThemePreview(color: "amarelo"),
+            ],
+          ),
+
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            spacing: 10,
+            children: [
+              ThemePreview(color: "azul"),
+              ThemePreview(color: "rosa"),
+              ThemePreview(color: "roxo"),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class ThemePreview extends StatelessWidget {
+  const ThemePreview({super.key, required this.color});
+  final String color;
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: LayoutBuilder(
+        builder: (context, constraints) => InkWell(
+          child: Ink(
+            height: constraints.maxWidth,
+            decoration: BoxDecoration(
+              color: theme.backgroundButtonsFlutuant,
+              borderRadius: BorderRadius.all(Radius.circular(15)),
+            ),
+            child: Padding(
+              padding: EdgeInsets.all(10),
+
+              child: SvgPicture.asset('assets/skeletons_theme/$color.svg'),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
