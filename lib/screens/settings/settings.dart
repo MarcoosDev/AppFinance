@@ -13,32 +13,40 @@ class Settings extends StatefulWidget {
 class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        iconTheme: IconThemeData(color: theme.iconsButtonsFlutuant),
-        title: Text(
-          'Configurações',
-          style: TextStyle(color: theme.iconsButtonsFlutuant),
-        ),
-        backgroundColor: theme.background,
-        foregroundColor: Colors.black,
-      ),
-      backgroundColor: theme.background,
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            ThemeWidget(),
-            SettingsWidget(
-              label: "Geral",
+    return ValueListenableBuilder<ColorTheme>(
+      valueListenable: ThemeApp.notifier,
+      builder: (context, atual, _) {
+        return Scaffold(
+          appBar: AppBar(
+            iconTheme: IconThemeData(color: theme.iconsButtonsFlutuant),
+            title: Text(
+              'Configurações',
+              style: TextStyle(color: theme.iconsButtonsFlutuant),
+            ),
+            backgroundColor: theme.background,
+            foregroundColor: Colors.black,
+          ),
+          backgroundColor: theme.background,
+          body: SingleChildScrollView(
+            child: Column(
               children: [
-                SettingOption(icon: Icons.person, label: "Conta"),
-                SettingOption(icon: Icons.notifications, label: "Notificações"),
-                SettingOption(icon: Icons.color_lens, label: "Cores"),
+                ThemeWidget(),
+                SettingsWidget(
+                  label: "Geral",
+                  children: [
+                    SettingOption(icon: Icons.person, label: "Conta"),
+                    SettingOption(
+                      icon: Icons.notifications,
+                      label: "Notificações",
+                    ),
+                    SettingOption(icon: Icons.color_lens, label: "Cores"),
+                  ],
+                ),
               ],
             ),
-          ],
-        ),
-      ),
+          ),
+        );
+      },
     );
   }
 }

@@ -99,18 +99,18 @@ class HomeAppBar extends StatelessWidget {
                 child: FittedBox(
                   fit: BoxFit.scaleDown,
                   child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.baseline,
-                    textBaseline: TextBaseline.alphabetic,
                     children: [
                       Column(
                         children: [
                           Row(
+                            textBaseline: TextBaseline.alphabetic,
+                            crossAxisAlignment: CrossAxisAlignment.baseline,
                             children: [
                               Text(
                                 NumberFormat(
                                   'R\$#,##0',
                                   'pt_BR',
-                                ).format(user.saldoInicial),
+                                ).format(user.saldoInicial.truncate()),
                                 style: TextStyle(
                                   fontSize: 60,
                                   fontWeight: FontWeight.normal,
@@ -119,9 +119,9 @@ class HomeAppBar extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                ",${((user.saldoInicial % 1) * 100).round().toString().padLeft(2, '0')}",
+                                ",${((user.saldoInicial.abs() * 100).round() % 100).toString().padLeft(2, '0')}",
                                 style: TextStyle(
-                                  fontSize: 50,
+                                  fontSize: 30,
                                   fontFamily: "TitanOne",
                                   fontWeight: FontWeight.w200,
                                   color: theme.text.withAlpha(250),

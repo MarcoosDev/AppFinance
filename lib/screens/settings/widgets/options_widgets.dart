@@ -16,22 +16,25 @@ class SettingsWidget extends StatefulWidget {
 class _SettingsWidgetState extends State<SettingsWidget> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          widget.label,
-          style: TextStyle(
-            color: theme.iconsButtonsFlutuant,
-            fontFamily: "NotoSansCypriot",
-            fontSize: 20,
-            fontWeight: FontWeight.w900,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            widget.label,
+            style: TextStyle(
+              color: theme.iconsButtonsFlutuant,
+              fontFamily: "NotoSansCypriot",
+              fontSize: 20,
+              fontWeight: FontWeight.w900,
+            ),
           ),
-        ),
-        const SizedBox(height: 10),
+          const SizedBox(height: 10),
 
-        ...widget.children,
-      ],
+          ...widget.children,
+        ],
+      ),
     );
   }
 }

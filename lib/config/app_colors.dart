@@ -48,7 +48,6 @@ class AppColors {
   static const vermelho = ColorTheme(
     background: Color.fromRGBO(40, 40, 40, 1),
     backgroundAnalytics: Color.fromRGBO(211, 211, 211, 1),
-
     backgroundButtonsFlutuant: Color.fromARGB(255, 62, 62, 62),
     primary: Color.fromARGB(255, 153, 25, 25),
     icons: Color.fromARGB(255, 222, 222, 222),
@@ -60,7 +59,6 @@ class AppColors {
   static const azul = ColorTheme(
     background: Color.fromRGBO(40, 40, 40, 1),
     backgroundAnalytics: Color.fromRGBO(211, 211, 211, 1),
-
     backgroundButtonsFlutuant: Color.fromARGB(255, 62, 62, 62),
     primary: Color.fromARGB(255, 31, 25, 153),
     icons: Color.fromARGB(255, 222, 222, 222),
@@ -95,7 +93,7 @@ class ColorTheme {
 
 class ThemeApp {
   static final ValueNotifier<ColorTheme> notifier = ValueNotifier<ColorTheme>(
-    AppColors.rosa,
+    AppColors.verde,
   );
 
   static ColorTheme get theme => notifier.value;

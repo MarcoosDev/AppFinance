@@ -1,3 +1,4 @@
+import 'package:app_financeiro_autoral/config/app_colors.dart';
 import 'package:app_financeiro_autoral/config/enum_colors.dart';
 import 'package:app_financeiro_autoral/screens/settings/widgets/theme_preview_widget.dart';
 import 'package:flutter/material.dart';
@@ -15,8 +16,18 @@ class _ThemeWidgetState extends State<ThemeWidget> {
     return Padding(
       padding: EdgeInsets.all(10),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         spacing: 10,
         children: [
+          Text(
+            "Tema",
+            style: TextStyle(
+              color: theme.iconsButtonsFlutuant,
+              fontSize: 20,
+              fontFamily: "NotoSansCypriot",
+              fontWeight: FontWeight.w900,
+            ),
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             spacing: 10,

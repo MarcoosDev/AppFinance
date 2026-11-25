@@ -3,37 +3,46 @@ import 'package:app_financeiro_autoral/config/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:app_financeiro_autoral/config/enum_colors.dart';
 
-class ThemePreview extends StatefulWidget {
+class ThemePreview extends StatelessWidget {
   const ThemePreview({super.key, required this.color});
   final OptionsColor color;
 
   @override
-  State<ThemePreview> createState() => _ThemePreviewState();
-}
-
-class _ThemePreviewState extends State<ThemePreview> {
-  @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: LayoutBuilder(
-        builder: (context, constraints) => InkWell(
-          borderRadius: BorderRadius.all(Radius.circular(15)),
-          onTap: () => {ThemeApp.alterarTema(widget.color.colorTheme)},
-          child: Ink(
-            height: constraints.maxWidth,
-            decoration: BoxDecoration(
-              color: theme.backgroundButtonsFlutuant,
-              borderRadius: BorderRadius.all(Radius.circular(15)),
-            ),
-            child: Padding(
-              padding: EdgeInsets.all(10),
+      child: ValueListenableBuilder<ColorTheme>(
+        valueListenable: ThemeApp.notifier,
+        builder: (context, atual, _) {
+          final bool selecionado = color.colorTheme == atual;
 
-              child: SvgPicture.asset(
-                'assets/skeletons_theme/${widget.color.name}.svg',
+          return AspectRatio(
+            aspectRatio: 1,
+            child: Material(
+              color: Colors.transparent,
+              child: Ink(
+                decoration: BoxDecoration(
+                  color: atual.backgroundButtonsFlutuant,
+                  borderRadius: BorderRadius.circular(15),
+                  border: Border.all(
+                    color: selecionado ? atual.primary : Colors.transparent,
+                    width: 5,
+                  ),
+                ),
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(15),
+                  onTap: () => ThemeApp.alterarTema(color.colorTheme),
+                  child: Padding(
+                    padding: const EdgeInsets.all(5),
+                    child: SvgPicture.asset(
+                      'assets/skeletons_theme/${color.name}.svg',
+                      fit: BoxFit.contain,
+                    ),
+                  ),
+                ),
               ),
             ),
-          ),
-        ),
+          );
+        },
       ),
     );
   }
