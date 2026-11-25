@@ -29,6 +29,56 @@ As previsões serão estimativas baseadas nas informações registradas pelo usu
 
 O projeto está em desenvolvimento. Atualmente, há uma tela inicial com dados de exemplo e elementos visuais para ganhos, gastos e seleção do dashboard. Os registros, cálculos de previsão e persistência de dados ainda precisam ser implementados.
 
+## Mudança de tema
+
+O aplicativo permite personalizar as cores da interface pela tela de configurações.
+
+Temas disponíveis:
+
+- Vermelho
+- Verde
+- Amarelo
+- Azul
+- Rosa
+- Roxo
+
+A seleção é feita em **Configurações > Cores**. O tema atual é gerenciado pelo `ThemeApp` e aplicado aos elementos da interface, como fundo, botões, ícones e textos.
+
+A implementação está em [app_colors.dart](/lib/config/app_colors.dart), [enum_colors.dart](/lib/config/enum_colors.dart) e [theme_widget.dart](/lib/screens/settings/widgets/theme_widget.dart).
+
+## Temas disponíveis
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="assets/skeletons_theme/vermelho.svg" width="180" alt="Tema vermelho"><br>
+      Vermelho
+    </td>
+    <td align="center">
+      <img src="assets/skeletons_theme/verde.svg" width="180" alt="Tema verde"><br>
+      Verde
+    </td>
+    <td align="center">
+      <img src="assets/skeletons_theme/amarelo.svg" width="180" alt="Tema amarelo"><br>
+      Amarelo
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="assets/skeletons_theme/azul.svg" width="180" alt="Tema azul"><br>
+      Azul
+    </td>
+    <td align="center">
+      <img src="assets/skeletons_theme/rosa.svg" width="180" alt="Tema rosa"><br>
+      Rosa
+    </td>
+    <td align="center">
+      <img src="assets/skeletons_theme/roxo.svg" width="180" alt="Tema roxo"><br>
+      Roxo
+    </td>
+  </tr>
+</table>
+
 ## Capturas de tela
 
 ### Tela inicial

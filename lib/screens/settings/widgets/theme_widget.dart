@@ -1,4 +1,5 @@
 import 'package:app_financeiro_autoral/config/app_colors.dart';
+import 'package:app_financeiro_autoral/config/enum_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -21,9 +22,9 @@ class _ThemeWidgetState extends State<ThemeWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             spacing: 10,
             children: [
-              ThemePreview(color: "vermelho"),
-              ThemePreview(color: "verde"),
-              ThemePreview(color: "amarelo"),
+              ThemePreview(color: OptionsColor.vermelho),
+              ThemePreview(color: OptionsColor.verde),
+              ThemePreview(color: OptionsColor.amarelo),
             ],
           ),
 
@@ -31,9 +32,9 @@ class _ThemeWidgetState extends State<ThemeWidget> {
             mainAxisAlignment: MainAxisAlignment.center,
             spacing: 10,
             children: [
-              ThemePreview(color: "azul"),
-              ThemePreview(color: "rosa"),
-              ThemePreview(color: "roxo"),
+              ThemePreview(color: OptionsColor.azul),
+              ThemePreview(color: OptionsColor.rosa),
+              ThemePreview(color: OptionsColor.roxo),
             ],
           ),
         ],
@@ -42,14 +43,22 @@ class _ThemeWidgetState extends State<ThemeWidget> {
   }
 }
 
-class ThemePreview extends StatelessWidget {
+class ThemePreview extends StatefulWidget {
   const ThemePreview({super.key, required this.color});
-  final String color;
+  final OptionsColor color;
+
+  @override
+  State<ThemePreview> createState() => _ThemePreviewState();
+}
+
+class _ThemePreviewState extends State<ThemePreview> {
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: LayoutBuilder(
         builder: (context, constraints) => InkWell(
+          borderRadius: BorderRadius.all(Radius.circular(15)),
+          onTap: () => {ThemeApp.alterarTema(widget.color.colorTheme)},
           child: Ink(
             height: constraints.maxWidth,
             decoration: BoxDecoration(
@@ -59,7 +68,9 @@ class ThemePreview extends StatelessWidget {
             child: Padding(
               padding: EdgeInsets.all(10),
 
-              child: SvgPicture.asset('assets/skeletons_theme/$color.svg'),
+              child: SvgPicture.asset(
+                'assets/skeletons_theme/${widget.color.name}.svg',
+              ),
             ),
           ),
         ),

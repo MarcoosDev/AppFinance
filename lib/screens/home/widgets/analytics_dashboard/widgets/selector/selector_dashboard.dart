@@ -14,9 +14,6 @@ class SelectorDashboard extends StatefulWidget {
 class _SelectorDashboard extends State<SelectorDashboard> {
   Alignment selectTypeGraphic = Alignment.centerLeft;
 
-  static Color colorIcons = theme.iconsButtonsFlutuant;
-  static Color colorSelector = theme.primary;
-
   bool receiptLongClicked = true;
   bool calendarMothClicked = false;
   bool trendingUpClicked = false;
@@ -43,7 +40,7 @@ class _SelectorDashboard extends State<SelectorDashboard> {
               height: 80,
 
               decoration: BoxDecoration(
-                color: colorSelector,
+                color: theme.primary,
                 border: Border.all(
                   color: theme.primary.withAlpha(150),
                   width: 5,
@@ -59,7 +56,7 @@ class _SelectorDashboard extends State<SelectorDashboard> {
               DashboardSelectorButton(
                 icon: Icons.receipt_long,
                 isSelected: receiptLongClicked,
-                color: colorIcons,
+                color: theme.iconsButtonsFlutuant,
                 onTap: () {
                   setState(() {
                     receiptLongClicked = true;
@@ -74,7 +71,7 @@ class _SelectorDashboard extends State<SelectorDashboard> {
               DashboardSelectorButton(
                 icon: Icons.calendar_month,
                 isSelected: calendarMothClicked,
-                color: colorIcons,
+                color: theme.iconsButtonsFlutuant,
                 onTap: () {
                   setState(() {
                     receiptLongClicked = false;
@@ -89,7 +86,7 @@ class _SelectorDashboard extends State<SelectorDashboard> {
               DashboardSelectorButton(
                 icon: Icons.trending_up,
                 isSelected: trendingUpClicked,
-                color: colorIcons,
+                color: theme.iconsButtonsFlutuant,
                 onTap: () {
                   setState(() {
                     receiptLongClicked = false;

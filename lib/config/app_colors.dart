@@ -93,4 +93,16 @@ class ColorTheme {
   });
 }
 
-final ColorTheme theme = AppColors.rosa;
+class ThemeApp {
+  static final ValueNotifier<ColorTheme> notifier = ValueNotifier<ColorTheme>(
+    AppColors.rosa,
+  );
+
+  static ColorTheme get theme => notifier.value;
+
+  static void alterarTema(ColorTheme novaCor) {
+    notifier.value = novaCor;
+  }
+}
+
+ColorTheme get theme => ThemeApp.theme;
