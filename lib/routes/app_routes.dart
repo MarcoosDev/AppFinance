@@ -6,9 +6,9 @@ import 'package:app_financeiro_autoral/screens/settings/settings.dart';
 import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 
-final UserModel us = UserModel(
+UserModel us = UserModel(
   name: "Livia Sophia",
-  saldoInicial: (1600 - 86.05),
+  saldoInicial: (1000),
   corThema: OptionsColor.roxo,
 ); //Isso é temporario
 
