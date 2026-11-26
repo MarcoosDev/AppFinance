@@ -22,7 +22,7 @@ class ThemePreview extends StatelessWidget {
               child: Ink(
                 decoration: BoxDecoration(
                   color: atual.backgroundButtonsFlutuant,
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(10),
                   border: Border.all(
                     color: selecionado ? atual.primary : Colors.transparent,
                     width: 5,

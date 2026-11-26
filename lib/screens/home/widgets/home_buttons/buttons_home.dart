@@ -1,4 +1,5 @@
 import 'package:app_financeiro_autoral/config/app_colors.dart';
+import 'package:go_router/go_router.dart';
 import 'package:flutter/material.dart';
 
 class BottonsHomeCenter extends StatelessWidget {
@@ -22,7 +23,7 @@ class BottonsHomeCenter extends StatelessWidget {
             child: _HomeActionButton(
               icon: Icons.arrow_downward,
               label: "Adicionar gasto",
-              onTap: () {},
+              onTap: () => GoRouter.of(context).push("/expense"),
             ),
           ),
         ],

@@ -1,12 +1,14 @@
 import 'package:app_financeiro_autoral/models/user_model.dart';
 import 'package:app_financeiro_autoral/config/enum_colors.dart';
+import 'package:app_financeiro_autoral/screens/add_expense/expense_screen.dart';
 import 'package:app_financeiro_autoral/screens/home/home_page.dart';
 import 'package:app_financeiro_autoral/screens/settings/settings.dart';
+import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 
 final UserModel us = UserModel(
   name: "Livia Sophia",
-  saldoInicial: -49.99,
+  saldoInicial: (1600 - 86.05),
   corThema: OptionsColor.roxo,
 ); //Isso é temporario
 
@@ -16,6 +18,27 @@ GoRouter router = GoRouter(
       path: "/",
       builder: (context, state) => HomePage(user: us),
     ),
-    GoRoute(path: "/settings", builder: (context, state) => const Settings()),
+    GoRoute(path: "/settings", builder: (context, state) => Settings()),
+    GoRoute(
+      path: "/expense",
+      pageBuilder: (context, state) => CustomTransitionPage(
+        key: state.pageKey, // ← adicione isto
+        child: const ExpenseScreen(),
+        transitionsBuilder: (context, animation, secondaryAnimation, child) {
+          final curva = CurvedAnimation(
+            parent: animation,
+            curve: Curves.easeOutCubic,
+            reverseCurve: Curves.easeInCubic,
+          );
+          return SlideTransition(
+            position: Tween(
+              begin: const Offset(0, 1),
+              end: Offset.zero,
+            ).animate(curva),
+            child: child,
+          );
+        },
+      ),
+    ),
   ],
 );
