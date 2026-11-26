@@ -15,7 +15,7 @@ class BottonsHomeCenter extends StatelessWidget {
             child: _HomeActionButton(
               icon: Icons.arrow_upward,
               label: "Adicionar ganho",
-              onTap: () {},
+              onTap: () => GoRouter.of(context).push("/gain"),
             ),
           ),
           const SizedBox(width: 16),

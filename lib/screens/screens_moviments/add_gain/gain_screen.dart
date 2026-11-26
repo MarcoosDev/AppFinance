@@ -1,0 +1,46 @@
+import 'package:app_financeiro_autoral/routes/app_routes.dart';
+import 'package:app_financeiro_autoral/screens/screens_moviments/widgets/keypad_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:app_financeiro_autoral/config/app_colors.dart';
+import 'package:go_router/go_router.dart';
+
+class GainScreen extends StatefulWidget {
+  const GainScreen({super.key});
+
+  @override
+  State<GainScreen> createState() => _GainScreenState();
+}
+
+class _GainScreenState extends State<GainScreen> {
+  int centavos = 0;
+  void _alterarVisor(Object mudanca) {
+    if (mudanca is String) {
+      if (mudanca == "CE") {
+        setState(() => centavos = 0);
+        return;
+      } else if (mudanca == "->") {
+        us.adicionarSaldo(centavos.toDouble() / 100);
+        GoRouter.of(context).pop();
+        return;
+      }
+    }
+
+    if (mudanca is int) {
+      final novo = centavos * 10 + mudanca;
+      if (novo > 99999999999) return;
+      setState(() => centavos = novo);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: theme.background,
+        iconTheme: IconThemeData(color: theme.iconsButtonsFlutuant),
+      ),
+      backgroundColor: theme.background,
+      body: KeypadWidget(centavos: centavos, onTap: _alterarVisor),
+    );
+  }
+}
