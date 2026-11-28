@@ -13,7 +13,7 @@ class BottonsHomeCenter extends StatelessWidget {
         children: [
           Expanded(
             child: _HomeActionButton(
-              icon: Icons.arrow_upward,
+              icon: Icons.add_circle_outline,
               label: "Adicionar ganho",
               onTap: () => GoRouter.of(context).push("/gain"),
             ),
@@ -21,7 +21,7 @@ class BottonsHomeCenter extends StatelessWidget {
           const SizedBox(width: 16),
           Expanded(
             child: _HomeActionButton(
-              icon: Icons.arrow_downward,
+              icon: Icons.remove_circle_outline,
               label: "Adicionar gasto",
               onTap: () => GoRouter.of(context).push("/expense"),
             ),

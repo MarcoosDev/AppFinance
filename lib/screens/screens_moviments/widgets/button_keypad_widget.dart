@@ -8,7 +8,7 @@ class ButtonKeyPad extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(5),
       child: InkWell(
         onTap: () => {onTap(label)},
         borderRadius: BorderRadius.circular(20),
@@ -19,7 +19,7 @@ class ButtonKeyPad extends StatelessWidget {
           decoration: BoxDecoration(
             color: (label is int
                 ? theme.backgroundButtonsFlutuant
-                : theme.primary.withAlpha(100)),
+                : theme.primary.withAlpha(150)),
             borderRadius: BorderRadius.circular(20),
           ),
           child: Center(

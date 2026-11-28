@@ -40,7 +40,18 @@ class _ExpenseScreenState extends State<ExpenseScreen> {
         iconTheme: IconThemeData(color: theme.iconsButtonsFlutuant),
       ),
       backgroundColor: theme.background,
-      body: KeypadWidget(centavos: centavos, onTap: _alterarVisor),
+      body: LayoutBuilder(
+        builder: (context, constraints) {
+          return SingleChildScrollView(
+            child: ConstrainedBox(
+              constraints: BoxConstraints(minHeight: constraints.maxHeight),
+              child: Center(
+                child: KeypadWidget(centavos: centavos, onTap: _alterarVisor),
+              ),
+            ),
+          );
+        },
+      ),
     );
   }
 }

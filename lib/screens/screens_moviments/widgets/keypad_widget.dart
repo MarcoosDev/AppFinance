@@ -20,10 +20,23 @@ class _KeypadWidgetState extends State<KeypadWidget> {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Padding(
-          padding: const EdgeInsets.all(20),
-          child: Text(
-            (_fmt.format(widget.centavos / 100)),
-            style: TextStyle(fontSize: 40, color: theme.iconsButtonsFlutuant),
+          padding: const EdgeInsets.all(30),
+          child: Container(
+            height: 90,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              color: theme.primary.withAlpha(100),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Center(
+              child: Text(
+                (_fmt.format(widget.centavos / 100)),
+                style: TextStyle(
+                  fontSize: 40,
+                  color: theme.iconsButtonsFlutuant,
+                ),
+              ),
+            ),
           ),
         ),
 
